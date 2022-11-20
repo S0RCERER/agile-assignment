@@ -30,22 +30,6 @@ describe("Base tests", () => {
         cy.wrap($card).find("p").contains(movies[index].title);
       });
     });
-  });
-  describe("The movie details page", () => {
-    before(() => {
-      cy.request(
-        `https://api.themoviedb.org/3/movie/${
-          movies[0].id
-        }?api_key=${Cypress.env("TMDB_KEY")}`
-      )
-        .its("body")
-        .then((movieDetails) => {
-          movie = movieDetails;
-        });
-    });
-    beforeEach(() => {
-      cy.visit(`/movies/${movies[0].id}`);
-    });
     
   });
 });
