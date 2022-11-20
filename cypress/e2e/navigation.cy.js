@@ -1,4 +1,6 @@
+/* eslint-disable no-undef */
 let movies;
+// eslint-disable-next-line no-unused-vars
 let movieId; // Enola Holmes movie id
 
 describe("Navigation", () => {
@@ -59,15 +61,4 @@ describe("Navigation", () => {
     });
   });
     
-  describe("The forward/backward links", () => {
-    beforeEach(() => {
-      cy.get(".MuiCardActions-root").eq(0).contains("More Info").click();
-    });
-    it("navigates between the movies detail page and the Home page.", () => {
-      cy.get("svg[data-testid='ArrowBackIcon'").click();
-      cy.url().should("not.include", `/movies/${movies[0].id}`);
-      cy.get("svg[data-testid='ArrowForwardIcon'").click();
-      cy.url().should("include", `/movies/${movies[0].id}`);
-    });
-  });
 });
