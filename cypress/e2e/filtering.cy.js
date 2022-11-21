@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import { filterByGenre, filterByTitle } from "../support/e2e";
 let movies; // List of Discover movies from TMDB
@@ -68,14 +69,14 @@ describe("Filtering", () => {
       });
     })
     it("handles case when there are no matches",() => {
-      const searchString = "m";
+      const searchString = "mad";
       const selectedGenreId = 35;
       const selectedGenreText = "Comedy";
       const matchingMoviesGenreAndTitle = filterByGenre(filterByTitle(movies, searchString), selectedGenreId);
       cy.get("#filled-search").clear().type(searchString);
       cy.get("#genre-select").click();
       cy.get("li").contains(selectedGenreText).click();
-      cy.get(".MuiCardHeader-content").should("have.length", 4);
+      cy.get(".MuiCardHeader-content").should("have.length", 0);
       });
     });
   });
