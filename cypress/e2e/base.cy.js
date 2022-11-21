@@ -43,7 +43,7 @@ describe("Base tests about movies lists", () => {
     });
   });
 
-  describe("Upcoming Movies List", () => {
+  describe("Upcoming Movies Page", () => {
     beforeEach(()=>{
       cy.visit("/movies/upcoming")
     })
