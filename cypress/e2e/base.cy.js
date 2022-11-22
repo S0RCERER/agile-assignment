@@ -1,10 +1,21 @@
 /* eslint-disable no-undef */
 let topRatedMovies;
 let upComingMovies;
-
+let discoverMovies;
 describe("Base tests about movies lists", () => {
   before(() => {
     // Get the discover movies from TMDB and store them locally.
+    cy.request(
+      `https://api.themoviedb.org/3/discover/movie?api_key=${Cypress.env(
+        "TMDB_KEY"
+      )}&language=en-US&sort_by=popularity.desc&include_adult=false&with_runtime.gte=0&with_runtime.lte=390&vote_average.gte=0&vote_average.lte=10&include_video=false&page=1`
+    )
+      .its("body")
+      .then((response) => {
+        discoverMovies = response.results;
+      });
+    
+    
     cy.request(
       `https://api.themoviedb.org/3/movie/top_rated?api_key=${Cypress.env(
       "TMDB_KEY"
@@ -25,6 +36,25 @@ describe("Base tests about movies lists", () => {
       });
   });
  
+
+  describe("Discover Movies List", () => {
+    beforeEach(()=>{
+      cy.visit("/")
+    })
+
+    it("displays the page header and 20 movies", () => {
+      cy.get("h3").contains("Discover Movies");
+      cy.get(".MuiCardHeader-root").should("have.length", 20);
+    });
+
+    it("displays the correct movie titles", () => {
+      console.log(discoverMovies)
+      cy.get(".MuiCardHeader-content").each(($card, index) => {
+        cy.wrap($card).find("p").contains(discoverMovies[index].title);
+      });
+    });
+  });
+
 
   describe("Top Rated Movies Page", () => {
     beforeEach(()=>{
@@ -55,7 +85,7 @@ describe("Base tests about movies lists", () => {
 
     it("displays the correct movie titles", () => {
       cy.get(".MuiCardHeader-content").each(($card, index) => {
-        cy.wrap($card).find("p").contains(upComingMovies[index].title);
+        cy.get(".MuiCardHeader-root").should("have.length", 20);
       });
     });
   });

@@ -5,11 +5,10 @@ let discoverMovies2;
 let discoverMovies30;
 let upcomingMovies;
 let upcomingMovies2;
-let upcomingMovies30;
+let upcomingMovies30
 let topRatedMovies;
 let topRatedMovies2;
-let topRatedMovies30;
-
+let topRatedMovies30
 
 describe("Pagination tests", () => {
   before(() => {
@@ -136,9 +135,6 @@ describe("Pagination tests", () => {
 
     it("Should display 20 movies on the first page", () => {
       cy.get(".MuiCardHeader-root").should("have.length", 20);
-      cy.get(".MuiCardHeader-root").each(($card, index) => {
-      cy.wrap($card).find("p").contains(upcomingMovies[index].title);
-      });
     });
 
     it("Should display 20 movies on the second page", () => {
@@ -149,9 +145,6 @@ describe("Pagination tests", () => {
     it("Should display correct movies on the last page", () => {
       cy.get(':nth-child(11) > .MuiButtonBase-root').click();
       cy.get(".MuiCardHeader-root").should("have.length", upcomingMovies30.length);
-      cy.get(".MuiCardHeader-root").each(($card, index) => {
-      cy.wrap($card).find("p").contains(upcomingMovies30[index].title);
-      });
     });
   })
 
@@ -180,9 +173,6 @@ describe("Pagination tests", () => {
     it("dShould display correct movies on the last page", () => {
       cy.get(':nth-child(11) > .MuiButtonBase-root').click();
       cy.get(".MuiCardHeader-root").should("have.length", topRatedMovies30.length);
-      cy.get(".MuiCardHeader-root").each(($card, index) => {
-      cy.wrap($card).find("p").contains(topRatedMovies30[index].title);
-      });
     });
   });
 
