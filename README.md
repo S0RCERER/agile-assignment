@@ -23,7 +23,7 @@ This is the first assignment project of Agile Software Development course.
 ## Related Links.
 
 + Gitlab:https://gitlab.com/S0RCERER/agile-assignment
-+ Github:https://gitlab.com/S0RCERER/agile-assignment
++ Github:https://github.com/S0RCERER/agile-assignment
 + Youtube:https://www.youtube.com/watch?v=uRKUZH7ID5I
 + Auto Deployment:https://s0rcerer.github.io/agile-assignment
 
