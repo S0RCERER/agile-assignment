@@ -3,20 +3,12 @@
 let movies;
 let movie;
 let reviews; 
+let excerptList;
+let authorList;
+let idList;
+
 describe("Review", () => {
     before(() => {
-        cy.request(
-          `https://api.themoviedb.org/3/discover/movie?api_key=${Cypress.env(
-            "TMDB_KEY"
-          )}`
-        )
-          .its("body")
-          .then((response) => {
-            movies = response.results;
-          });
-      });
-    
-      before(() => {
         cy.request(
           `https://api.themoviedb.org/3/discover/movie?api_key=${Cypress.env(
             "TMDB_KEY"
@@ -27,8 +19,25 @@ describe("Review", () => {
             movies = response.results;
           });
       });
+    
       beforeEach(() => {
         cy.visit("/");
+      });
+
+    beforeEach(() => {
+        cy.request(
+          `https://api.themoviedb.org/3/movie/${
+            movies[1].id
+          }/reviews?api_key=${Cypress.env("TMDB_KEY")}`
+        )
+          .its("body")
+          .then((review) => {
+            reviews = review;
+            authorList = reviews.results.map(a => a.author);
+            excerptList = reviews.results.map(c => c.content);
+            idList = reviews.results.map(i => i.id);
+          });
+        cy.visit(`/movies/${movies[1].id}`);
       });
 
 
@@ -50,12 +59,30 @@ describe("Review", () => {
         cy.get(".MuiSvgIcon-root[data-testid='RateReviewIcon']").click()
         cy.url().should("include", "/reviews/form")
         cy.get("h2").contains("Write a review");
-        cy.get('.MuiButton-containedPrimary')
-        cy.get('.MuiButton-containedSecondary')
-        cy.get('#author')
-        cy.get('#review')
-        cy.get('#select-rating')
     });
-});
+  });
   
+  describe("Review List", () => {
+    it("Should display correct elements on the review list", () => {
+      cy.get(".MuiGrid-grid-xs-9>button").contains("Reviews").click();
+      cy.get("th").contains("Author")
+      cy.get("th").contains("Excerpt")
+      cy.get("th").contains("More")
+      cy.get("td").contains("Full Review")
+      cy.get(".MuiTableBody-root>tr>th").each(($card, index) => {
+        cy.get(':nth-child(1) > :nth-child(3) > a')
+        cy.wrap($card).next().contains(excerptList[index].substring(0,10));
+      });
+    })
+
+    it("should show header only if there is no review", () => {
+      cy.visit(`/movies/895539`);
+      cy.get(".MuiGrid-grid-xs-9>button").contains("Reviews").click();
+      cy.get("th").contains("Author")
+      cy.get("th").contains("Excerpt")
+      cy.get("th").contains("More")
+      cy.get(".MuiTableBody-root>tr").should("have.length", 0);
+    })
+  });
+
 });
