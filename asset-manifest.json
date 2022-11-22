@@ -1,12 +1,46 @@
 {
   "files": {
-    "main.js": "/agile-assignment/static/js/main.6d98779d.js",
+    "main.js": "/agile-assignment/static/js/main.aeed6380.js",
+    "static/js/674.f0c51ab1.chunk.js": "/agile-assignment/static/js/674.f0c51ab1.chunk.js",
+    "static/js/797.bb422cf8.chunk.js": "/agile-assignment/static/js/797.bb422cf8.chunk.js",
+    "static/js/844.57b676ee.chunk.js": "/agile-assignment/static/js/844.57b676ee.chunk.js",
+    "static/js/859.093dcc46.chunk.js": "/agile-assignment/static/js/859.093dcc46.chunk.js",
+    "static/js/241.468a216d.chunk.js": "/agile-assignment/static/js/241.468a216d.chunk.js",
+    "static/js/669.c9b5f764.chunk.js": "/agile-assignment/static/js/669.c9b5f764.chunk.js",
+    "static/js/665.ed4e5b02.chunk.js": "/agile-assignment/static/js/665.ed4e5b02.chunk.js",
+    "static/js/228.85f3c392.chunk.js": "/agile-assignment/static/js/228.85f3c392.chunk.js",
+    "static/js/390.fd51ea4c.chunk.js": "/agile-assignment/static/js/390.fd51ea4c.chunk.js",
+    "static/js/655.ba7b4699.chunk.js": "/agile-assignment/static/js/655.ba7b4699.chunk.js",
+    "static/js/813.b00efd50.chunk.js": "/agile-assignment/static/js/813.b00efd50.chunk.js",
+    "static/js/230.d1c667d4.chunk.js": "/agile-assignment/static/js/230.d1c667d4.chunk.js",
+    "static/js/17.36e8c778.chunk.js": "/agile-assignment/static/js/17.36e8c778.chunk.js",
+    "static/js/919.917abbc0.chunk.js": "/agile-assignment/static/js/919.917abbc0.chunk.js",
+    "static/js/211.93aa2a8f.chunk.js": "/agile-assignment/static/js/211.93aa2a8f.chunk.js",
+    "static/js/524.61810034.chunk.js": "/agile-assignment/static/js/524.61810034.chunk.js",
+    "static/js/106.6dd1d929.chunk.js": "/agile-assignment/static/js/106.6dd1d929.chunk.js",
     "static/media/pexels-dziana-hasanbekava-5480827.jpg": "/agile-assignment/static/media/pexels-dziana-hasanbekava-5480827.6123c500508cea5447e7.jpg",
     "static/media/film-poster-placeholder.png": "/agile-assignment/static/media/film-poster-placeholder.9a8182eb4c8ae70fe602.png",
     "index.html": "/agile-assignment/index.html",
-    "main.6d98779d.js.map": "/agile-assignment/static/js/main.6d98779d.js.map"
+    "main.aeed6380.js.map": "/agile-assignment/static/js/main.aeed6380.js.map",
+    "674.f0c51ab1.chunk.js.map": "/agile-assignment/static/js/674.f0c51ab1.chunk.js.map",
+    "797.bb422cf8.chunk.js.map": "/agile-assignment/static/js/797.bb422cf8.chunk.js.map",
+    "844.57b676ee.chunk.js.map": "/agile-assignment/static/js/844.57b676ee.chunk.js.map",
+    "859.093dcc46.chunk.js.map": "/agile-assignment/static/js/859.093dcc46.chunk.js.map",
+    "241.468a216d.chunk.js.map": "/agile-assignment/static/js/241.468a216d.chunk.js.map",
+    "669.c9b5f764.chunk.js.map": "/agile-assignment/static/js/669.c9b5f764.chunk.js.map",
+    "665.ed4e5b02.chunk.js.map": "/agile-assignment/static/js/665.ed4e5b02.chunk.js.map",
+    "228.85f3c392.chunk.js.map": "/agile-assignment/static/js/228.85f3c392.chunk.js.map",
+    "390.fd51ea4c.chunk.js.map": "/agile-assignment/static/js/390.fd51ea4c.chunk.js.map",
+    "655.ba7b4699.chunk.js.map": "/agile-assignment/static/js/655.ba7b4699.chunk.js.map",
+    "813.b00efd50.chunk.js.map": "/agile-assignment/static/js/813.b00efd50.chunk.js.map",
+    "230.d1c667d4.chunk.js.map": "/agile-assignment/static/js/230.d1c667d4.chunk.js.map",
+    "17.36e8c778.chunk.js.map": "/agile-assignment/static/js/17.36e8c778.chunk.js.map",
+    "919.917abbc0.chunk.js.map": "/agile-assignment/static/js/919.917abbc0.chunk.js.map",
+    "211.93aa2a8f.chunk.js.map": "/agile-assignment/static/js/211.93aa2a8f.chunk.js.map",
+    "524.61810034.chunk.js.map": "/agile-assignment/static/js/524.61810034.chunk.js.map",
+    "106.6dd1d929.chunk.js.map": "/agile-assignment/static/js/106.6dd1d929.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.6d98779d.js"
+    "static/js/main.aeed6380.js"
   ]
 }
