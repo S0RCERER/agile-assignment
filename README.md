@@ -38,7 +38,7 @@ This is the first assignment project of Agile Software Development course.
 + src/index.js
 ## Independent learning.
 ### Component test.
-![image](public/image/component-test.png)
+![image](images/component-test.png)
 ### Auto deployment.
 link:https://s0rcerer.github.io/agile-assignment
-![image](public/image/auto-deploy.png)
+![image](images/auto-deploy.png)
